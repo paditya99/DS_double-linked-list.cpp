@@ -374,3 +374,33 @@ int main()
 
  return 0;
 }
+
+void addatend(int value){
+
+
+       Node* temp=new Node();
+       temp->data=value;
+
+     if (head == NULL) {
+        temp->prev = NULL;
+        temp->next=NULL;
+        head = temp;
+        tail=temp;
+        return;
+       }
+     else{
+       Node *s;
+       s=head;
+       while(s->next!=NULL){
+        s=s->next;
+       }
+       temp->next=NULL;
+       s->next=temp;
+       temp->prev=s;
+       tail=temp;
+
+       cout<<"add at end  ";
+
+      }
+    }
+
